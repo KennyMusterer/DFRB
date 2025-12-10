@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #101216;
+    --secondary-color: #f7f7f7;
+    --accent-color: #d97706;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+    overflow: hidden;
+}
+
+#site-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 2s;
+}
+
+#site-wrapper.intro-not-done{
+    transform: translateY(50%);
+}
+
+#site-wrapper.intro-done{
+    transform: translateY(0%);
+}
+
+#headline-text{
+    font-size: 1.5rem;
+    transition: font-size 2s
+}
+
+.red{
+    color: #dc2626;
+}
+
+.blue{
+    color: #2563eb;
+}
+
+#sound-reminder{
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+#sound-reminder.intro-done{
+    opacity: 0;
+}
+
+.fa-solid{
+    margin: 4rem 0 1rem 0;
+    font-size: 4rem;
+}
+
+.ton-an{
+    font-size: 1.2rem;
+}
+
+.fa-phone{
+    margin-top: 20vh;
+    opacity: 0;
+    transition: opacity 1.5s;
+    animation: ring 0.5s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+
+.fa-phone.intro-done{
+    opacity: 1;
+}
+
+
+@keyframes ring {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(15deg);  
+    }
+    40% {
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: rotate(15deg);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+}
+
+.hint{
+    font-size: 0.4rem;
+    padding: 1rem;
+}
+
+#audio-visualizer{
+    display: none;
+    align-items: flex-end; 
+    justify-content: center;
+    height: 60px;
+    min-width: 100px;
+    padding: 5px;
+}
+
+.bar {
+    width: 6px; 
+    background-color: #ffffff; 
+    margin: 0 2px;
+    transition: height 0.05s ease-out; 
+    min-height: 1px;
+}
+
+#page-content{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.raetsel-text{
+    text-align: left;
+    max-width: 80vw;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.dark-input {
+    width: 60vw;
+    padding: 12px 15px;
+    background-color: #1a1e26; 
+    color: #e0e6f1; 
+    border: 1px solid #3c4454; 
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+#unlock-input-label {
+    font-size: 1rem;
+    margin: 15vh 0 0.5rem 0;
+}
+
+.dark-input:focus {
+    border-color: #b15e1a;
+    box-shadow: 0 0 0 3px rgba(255, 154, 2, 0.5);
+    transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://kit.fontawesome.com/41624f9860.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="site-wrapper" class="intro-not-done">
+            <div id="headline-text">
+                <h1>Die drei <span>?</span><span class="red">?</span><span class="blue">?</span></h1>
+                <h4>Aktenzeichen: GEBURTSTAG</h2>
+                <div id="sound-reminder">
+                    <i class="fa-solid fa-volume-high"></i><br/>
+                    <span class="ton-an">Ton an!</span>
+                </div>
+                <div id="page-content" hidden>
+                    <div id="phone-container">
+                        <i id="phone" class="fa-solid fa-phone"></i><br/>
+                        <span id="phone-subtext" class="ton-an">Ein Anruf!</span>
+                    </div>
+                    <audio id="ringtone-audio" src="./resources/Klingelton.mp3" loop hidden></audio>
+                    <audio id="kai-audio" src="./resources/Nachricht_Kai.mp3" hidden></audio>
+                    <div id="audio-visualizer" hidden></div>
+                    <label id="unlock-input-label" for="unlock-input" hidden>Code zum Freischalten</label>
+                    <input type="text" id="unlock-input" class="dark-input" placeholder="Code" hidden>
+                </div>
+            </div>
+        </div>
+        
+        <script src="index.js" async defer></script>
+    </body>
+</html>
