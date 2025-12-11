@@ -28,6 +28,39 @@
                     <div id="audio-visualizer" hidden></div>
                     <label id="unlock-input-label" for="unlock-input" hidden>Code zum Freischalten</label>
                     <input type="number" id="unlock-input" class="dark-input" placeholder="Code" hidden>
+                    <div id="clue-area-container" hidden>
+                        <span class="instruction-text">Du hast den Geburtstagstresor gefunden. Um ihn zu öffnen musst du die folgenden Rätsel lösen und den korrekten Code eingeben. Deine Eingabe bestätigst du mit * und löschst sie mit #. Unten kannst du die einzelnen Hinweise aufrufen.</span>
+                        <hr>
+                        <div id="clue-navigation-container">
+                            <div class="clue-nav-button active" data-clue="clue-1"><p>1</p></div>
+                            <div class="clue-nav-button" data-clue="clue-2"><p>2</p></div>
+                            <div class="clue-nav-button" data-clue="clue-3"><p>3</p></div>
+                            <div class="clue-nav-button" data-clue="clue-4"><p>4</p></div>
+                            <div class="clue-nav-button" data-clue="clue-5"><p>5</p></div>
+                        </div>
+                        <div id="clues">
+                            <div class="clue" id="clue-1">
+                                <span class="clue-header">Hinweis 1:</span>
+                                <span class="clue-text">In einer Folge der drei ??? wird ein Surfturnier mit Peter als Teilnehmer überschattet durch den Diebstahl eines Ford Shelby GT. Die beiden ersten Stellen des Codes sind die beiden letzten Stellen des Baujahres dieses Fahrzeugs.</span>
+                            </div>
+                            <div class="clue hidden" id="clue-2">
+                                <span class="clue-header">Hinweis 2:</span>
+                                <span class="clue-text">Die drei ??? haben in der Serie alle eine Freundin gehabt. Welcher der drei hat sich offiziell nie von seiner Freundin getrennt? A) Justus B) Peter C) Bob D) keiner der drei. Der Buchstabe der richtigen Antwort ist der nächste Buchstabe im Code.</span>
+                            </div>
+                            <div class="clue hidden" id="clue-3">
+                                <span class="clue-header">Hinweis 3:</span>
+                                <span class="clue-text">Der Code setzt sich mit der Folgennummer einer der objektiv besten (Kennys Meinung) Folgen fort. Diese Folge hat in der Hörspielzählung und der Buchzählung einer der umstrittensten Folgen der gesamten Serie als Nachbarfolge. Diese Nachbarfolge ist vorallem wegen ihrem fehlenden Realismus unbeliebt. (Bob wird in ein neues Berufsfeld gezwungen)</span>
+                            </div>
+                            <div class="clue hidden" id="clue-4">
+                                <span class="clue-header">Hinweis 4:</span>
+                                <span class="clue-text">Viele der Titelbilder der Folgen wurden von Aiga Rasch gestaltet. Dabei wurde bewusst darauf verzichtet, die drei darauf abzubilden. Dennoch gibt es eine Ausnahme. In welcher Folge ist einer der drei ??? auf dem Cover zu sehen? A) Gefährliches Quiz B) Die falschen Detektive C) Der Doppelgänger D) Doppelte Täuschung. Der Buchstabe der richtigen Antwort ist der nächste Buchstabe im Code.</span>
+                            </div>
+                            <div class="clue hidden" id="clue-5">
+                                <span class="clue-header">Hinweis 5:</span>
+                                <span class="clue-text">Die ikonischen Fragezeichen stehen für die Detektive. Welche Farbe steht für Peter? A) rot B) blau C) weiß. Der Buchstabe der richtigen Antwort ist der nächste Buchstabe im Code.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

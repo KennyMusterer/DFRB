@@ -154,3 +154,54 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 154, 2, 0.5);
     transition: all 0.2s ease-in-out;
 }
+
+.instruction-text{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 90vw;
+    text-align: left;
+    display: block;
+    margin-top: 1rem;
+}
+
+.clue{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 90vw;
+    text-align: left;
+    display: block;
+    margin: 1rem 0 1rem 0;
+}
+
+.clue-header{
+    font-weight: bold;
+}
+
+#clue-navigation-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.clue-nav-button{
+    color: white;
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clue-nav-button.active{
+    border-color: #d97706;
+    color: #d97706;
+}
+
+.clue.hidden{
+    display: none;
+}

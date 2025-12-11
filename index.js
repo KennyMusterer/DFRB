@@ -10,6 +10,10 @@ const kaiAudio = document.getElementById('kai-audio');
 const audioVisualizer = document.getElementById('audio-visualizer');
 const unlockInputLabel = document.getElementById('unlock-input-label');
 const unlockInput = document.getElementById('unlock-input');
+const clueAreaContainer = document.getElementById('clue-area-container');
+const navButtons = document.querySelectorAll('.clue-nav-button');
+const clueContainer = document.getElementById('clues');
+const allClues = clueContainer.querySelectorAll('.clue');
 
 let introIsDone = false;
 let audioEnded = true;
@@ -58,9 +62,11 @@ unlockInput.addEventListener('input', (event) => {
     const inputHash = hashCode(unlockInput.value.trim().toLowerCase());
     if(inputHash === 676886464){
         phone.style.display = 'none';
+        phoneContainer.style.display = 'none';
         phoneSubtext.hidden = true;
         unlockInputLabel.hidden = true;
         unlockInput.hidden = true;
+        clueAreaContainer.hidden = false;
     }
 });
 
@@ -91,7 +97,28 @@ function hashCode(str) {
     for (let i = 0, len = str.length; i < len; i++) {
         let chr = str.charCodeAt(i);
         hash = (hash << 5) - hash + chr;
-        hash |= 0; // Convert to 32bit integer
+        hash |= 0;
     }
     return hash;
 }
+
+navButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        navButtons.forEach(btn => {
+            if(btn === button){
+                btn.classList.add('active');
+            } else {     
+                btn.classList.remove('active');
+            }
+        });
+        const targetClueId = button.getAttribute('data-clue');
+        allClues.forEach(clue => {
+            if(clue.id === targetClueId){
+                console.log('showing clue:', targetClueId);
+                clue.classList.remove('hidden');
+            } else {
+                clue.classList.add('hidden');
+            }
+        });
+    });
+});
