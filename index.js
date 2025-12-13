@@ -67,6 +67,7 @@ unlockInput.addEventListener('input', (event) => {
         unlockInputLabel.hidden = true;
         unlockInput.hidden = true;
         clueAreaContainer.hidden = false;
+        window.scrollTo(0, 0);
     }
 });
 
